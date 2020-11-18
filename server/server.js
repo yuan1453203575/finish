@@ -20,6 +20,7 @@ mongoose.connect(
 
       server.on("error", (error) => {
         console.log("服务启动失败");
+        console.log(error);
       });
       server.listen(3000, "localhost", () => {
         console.log("服务启动成功");

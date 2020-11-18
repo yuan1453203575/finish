@@ -1,2 +1,10 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="header">
+  <view class="addr">选择地区</view>
+  <input type="text" />
+</view>
+<swiper autoplay="true" interval="3000" indicator-dots="true" indicator-color="#ddd" indicator-active-color="#fff" circular="true">
+ <swiper-item wx:for="{{bannerList}}" wx:key="index">
+   <image class="image" src="{{item.imageUrl}}"></image>
+ </swiper-item>
+</swiper>

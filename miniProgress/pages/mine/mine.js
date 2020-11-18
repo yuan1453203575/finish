@@ -1,5 +1,27 @@
-// pages/mine/mine.js
+// pages/index/index.js
 Page({
+  getUserInfoAction(info){
+    if(info.detail.errMsg === 'getUserInfo:ok') {
+      //将用户信息发送给后台
+      wx.request({
+        url: 'http://localhost:3000/api/user/set_userInfo',
+        method: 'POST',
+        data: {
+          ...info.detail.userInfo,
+          token: wx.getStorageSync('token')
+        },
+        success(res) {
+          console.log(res);
+        },
+        fail(error) {
+          console.log(error);
+        }
+      })
+    } else {
+
+    }
+    console.log(info);
+  },
 
   /**
    * 页面的初始数据
