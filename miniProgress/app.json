@@ -4,7 +4,8 @@
     "pages/home/home",
     "pages/news/news",
     "pages/message/message",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/newsDetail/newsDetail"
   ],
   "style": "v2",
   "sitemapLocation": "sitemap50.json",

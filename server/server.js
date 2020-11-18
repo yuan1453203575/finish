@@ -22,7 +22,7 @@ mongoose.connect(
         console.log("服务启动失败");
         console.log(error);
       });
-      server.listen(3000, "localhost", () => {
+      server.listen(3000, "10.36.150.131", () => {
         console.log("服务启动成功");
       });
     }
