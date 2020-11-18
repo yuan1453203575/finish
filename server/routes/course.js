@@ -30,5 +30,12 @@ const { mock } = require('mockjs');
 //   console.log(res);
 //   console.log('保存成功');
 // })
+router.get('/get_courseList', async (ctx) => {
+  const result = await Course.find();
+  ctx.body = {
+    message: 'ok',
+    data: result,
+  }
+})
 
 module.exports = router;

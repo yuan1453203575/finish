@@ -1,10 +1,47 @@
 <!--pages/home/home.wxml-->
-<view class="header">
-  <view class="addr">选择地区</view>
-  <input type="text" />
+<view class="home">
+  <view class="header">
+    <view class="addr">选择地区</view>
+    <input type="text" />
+  </view>
+  <swiper autoplay="true" interval="3000" indicator-dots="true" indicator-color="#ddd" indicator-active-color="#fff" circular="true">
+  <swiper-item wx:for="{{bannerList}}" wx:key="index">
+    <image class="image" src="{{item.imageUrl}}"></image>
+  </swiper-item>
+  </swiper>
+  <view class="category">
+    <view>
+      <text class="iconfont iconclassify_icon"></text>
+      <text>选课中心</text>
+    </view>
+    <view>
+      <text class="iconfont .icondiannao"></text>
+      <text>公开课</text>
+    </view> <view>
+      <text class="iconfont iconlihe"></text>
+      <text>热门活动</text>
+    </view> <view>
+      <text class="iconfont iconlocation"></text>
+      <text>全部校区</text>
+    </view>
+  </view>
+  <view class="recommend">
+    <view class="top">
+      <text class="title">名师推荐</text>
+      <view class="more">
+        <text class="mo">更多</text>
+        <text class="iconfont iconiconfontjiantou5"></text>
+      </view>
+    </view>
+    <scroll-view scroll-x="{{true}}" class="scroll">
+      <view class="scroll-view">
+        <view class="item" wx:for="{{teacherList}}" wx:key="index">
+          <image src="{{imgUrl}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="station">{{item.station}}老师</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
 </view>
-<swiper autoplay="true" interval="3000" indicator-dots="true" indicator-color="#ddd" indicator-active-color="#fff" circular="true">
- <swiper-item wx:for="{{bannerList}}" wx:key="index">
-   <image class="image" src="{{item.imageUrl}}"></image>
- </swiper-item>
-</swiper>
+

@@ -6,6 +6,7 @@ const auth = require('./routes/auth');
 const users = require('./routes/users');
 const teacher = require('./routes/teacher');
 const course = require('./routes/course')
+const news = require('./routes/news')
 
 const app = new koa(); 
 
@@ -30,4 +31,6 @@ app.use(users.routes()).use(users.allowedMethods());
 app.use(teacher.routes()).use(teacher.allowedMethods());
 //处理课程信息
 app.use(course.routes()).use(teacher.allowedMethods());
+//处理资讯信息
+app.use(news.routes()).use(news.allowedMethods());
 module.exports = app;
