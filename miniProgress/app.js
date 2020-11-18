@@ -1,3 +1,4 @@
+import { HTTP, CHECK_LOGIN, SEND_CODE } from './http/api'
 App({
   //登录：标记用户的行为
   onLaunch() {
@@ -9,7 +10,7 @@ App({
     const token = wx.getStorageSync('token');
     if(token) {
        wx.request({
-         url: 'http://localhost:3000/api/auth/check_login',
+         url: HTTP + CHECK_LOGIN,
          method: 'GET',
          data: {
            token,
@@ -33,7 +34,7 @@ App({
         console.log(code);
         //登录第二步：将code发送给服务器
         wx.request({
-          url: 'http://localhost:3000/api/auth/send_code',
+          url: HTTP + SEND_CODE,
           method: 'POST',
           data: {
             code

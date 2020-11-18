@@ -1,6 +1,6 @@
 const Router = require('koa-router');
 const axios = require('axios');
-const User = require('../model/user');
+const Auth = require('../model/auth');
 const JWT = require('jsonwebtoken');
 
 const router = new Router({prefix: '/api/auth'});
@@ -20,12 +20,12 @@ router.post('/send_code', async (ctx) => {
   //登陆第四步：获得openid和session_key
   if(result.status === 200) {
     //隐藏步骤，静默注册
-    const user = await User.findOne({openid: result.data.openid});
+    const user = await Auth.findOne({openid: result.data.openid});
     if(user) {
       //老用户
     } else {
       //新用户，需要注册
-      const newUser = await new User({openid: result.data.openid}).save();
+      const newUser = await new Auth({openid: result.data.openid}).save();
     }
     //登录第五步,响应客户端
     const token = JWT.sign({
@@ -48,7 +48,7 @@ router.get('/check_login', async (ctx) => {
     token: 'string',
   });
   const result = JWT.verify(ctx.request.query.token, 'hello world');
-  const user = await User.findOne({openid: result.openid});
+  const user = await Auth.findOne({openid: result.openid});
   if(user) {
     ctx.status = 200;
     ctx.body = {

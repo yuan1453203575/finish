@@ -1,6 +1,6 @@
 <!--pages/mine/mine.wxml-->
-<view class="personinfo">
+<view class="personinfo" wx:if="{{isShow}}">
   <open-data class="userimg" type="userAvatarUrl"></open-data>
   <open-data class="username" type="userNickName"></open-data>
 </view>
-<button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfoAction">登录</button>
+<button wx:else class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfoAction">登录</button>

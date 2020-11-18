@@ -7,11 +7,13 @@
 }
 .addr {
   width: 190rpx;
+  text-align: center;
 }
 input {
   width: 520rpx;
   height: 72rpx;
   border-radius: 36rpx;
+  box-sizing: border-box;
   border: 1px solid #ddd;
 }
 .image {

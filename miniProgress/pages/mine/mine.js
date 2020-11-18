@@ -1,19 +1,21 @@
 // pages/index/index.js
+import { HTTP, SET_USERINFO } from '../../http/api'
 Page({
   getUserInfoAction(info){
     if(info.detail.errMsg === 'getUserInfo:ok') {
       //将用户信息发送给后台
       wx.request({
-        url: 'http://localhost:3000/api/user/set_userInfo',
+        url: HTTP + SET_USERINFO,
         method: 'POST',
         data: {
           ...info.detail.userInfo,
           token: wx.getStorageSync('token')
         },
-        success(res) {
+        success:(res) => {
+          this.setData({isShow: true});
           console.log(res);
         },
-        fail(error) {
+        fail:(error) => {
           console.log(error);
         }
       })
@@ -27,7 +29,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isShow: false,
   },
 
   /**
