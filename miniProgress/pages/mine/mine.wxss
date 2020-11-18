@@ -1,4 +1,13 @@
 /* pages/mine/mine.wxss */
+
+.mine {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 0 30rpx;
+}
 .personinfo {
   width: 100%;
   height: 160rpx;
@@ -7,6 +16,7 @@
   align-items: center;
   padding: 0 30rpx;
 }
+
 .userimg {
   width: 120rpx;
   height: 120rpx;
@@ -14,12 +24,94 @@
   overflow: hidden;
 }
 .username {
-  margin-left: 20px;
+  
+  margin-left: 40rpx;
   display: flex;
   align-items: center;
 }
-.btn {
+.set{
+  width: 60rpx;
+  height: 60rpx;
   position: absolute;
-  bottom: 0;
+  right:50rpx;
+}
+.myorder{
+  position: absolute;
+  top: 200rpx;
+    width: 100%;
+    height: 250rpx;
+}
+.box1{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+  width: 660rpx;
+  height: 200rpx;
+  border: 2rpx solid #bbb;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box1-item{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+.box1-img{
+  width: 50rpx;
+  height: 50rpx;
+}
+.box1-text{
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+.content{
+  margin-left: 10rpx;
+  width: 660rpx;
+  height: 450rpx;
+  position: absolute;
+  top: 500rpx;
+  border: 1px solid #bbb;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349019607843137);
+
+}
+.content-item{
+  box-sizing: border-box;
+   width: 100%;
+   height: 90rpx;
+    border-bottom: 1px solid #bbb;
+    padding: 0 20rpx;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+
+}
+.title{
+  margin-left: 20rpx;
+}
+.jiantou{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+}
+.login-btn {
+  position: absolute;
+  top: 0;
   left: 25%;
+}
+.logout-btn{
+    position: absolute;
+    bottom: 20rpx;
+    left:200rpx;
+    background-color: #108ee9;
+    color: #fff;
+    font-size: 32rpx;
 }

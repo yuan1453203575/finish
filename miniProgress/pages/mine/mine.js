@@ -24,6 +24,9 @@ Page({
     }
     console.log(info);
   },
+  logoutAction(){
+    this.setData({isShow:false})
+  },
 
   /**
    * 页面的初始数据
