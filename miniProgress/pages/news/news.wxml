@@ -1,2 +1,21 @@
-<!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<view class="news_wrap">
+  <view bindtap="gonewsDetail" data-id="{{item.id}}" class="news_list" wx:for="{{list}}" wx:key="index">
+    <view class="image">
+      <image class="img" src="{{imgPath}}"></image>
+    </view>
+    <view class="text">
+      <view>
+        <text class="title">{{item.title}}</text>
+      </view>
+      <view class="view">
+        <view class="times">
+          <text class="time">{{item.publishtime}}</text>
+        </view>
+        <view class="">
+          <image class="viewIcon" src="{{viewIcon}}"></image>
+          <text class="num">{{item.num}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

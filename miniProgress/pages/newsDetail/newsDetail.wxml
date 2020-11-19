@@ -1,0 +1,13 @@
+<view class="view_wrap">
+  <scroll-view scroll-y="{{true}}" class="wrap">
+    <view class="main">
+      <view class="title">
+        <text class="title_text">{{title}}</text>
+      </view>
+      <view class="text">
+        <text class="text_text">{{text}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="bottom"></view>
