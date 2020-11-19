@@ -23,7 +23,7 @@ mongoose.connect(
         console.log(error);
       });
       server.listen(3000, "10.36.150.131", () => {
-        console.log("服务启动");
+        console.log("服务启动成功");
       });
     }
   }
