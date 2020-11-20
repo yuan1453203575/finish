@@ -37,7 +37,7 @@ router.get('/get_teacherList', async (ctx) => {
     data: result,
   }
 })
-
+// get_detailTeacher
 
 
 

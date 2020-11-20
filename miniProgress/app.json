@@ -5,7 +5,11 @@
     "pages/news/news",
     "pages/message/message",
     "pages/mine/mine",
-    "pages/newsDetail/newsDetail"
+    "pages/newsDetail/newsDetail",
+    "pages/teacherList/teacherList",
+    "pages/teacherDetail/teacherDetail",
+    "pages/publicList/publicList",
+    "pages/publicDetail/publicDetail"
   ],
   "style": "v2",
   "sitemapLocation": "sitemap50.json",

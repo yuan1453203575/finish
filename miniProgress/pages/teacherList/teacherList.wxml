@@ -1,0 +1,19 @@
+<!--pages/teacherList/teacherList.wxml-->
+<view class="list_wrap">
+  <view data-id="{{item.id}}" wx:for="{{listData}}" wx:key="index" class="item_wrap" bindtap="goteacherDetail">
+     <view class="img">
+        <image src="../../images/home-teacher.png"></image>
+     </view>
+
+     <view class="info">
+          <text class="name">{{item.name}}</text>
+          <text class="graduation">毕业学校：{{item.graduation}}</text>
+          <text class="education">学     历：{{item.education}}</text>
+          <text class="teaclass">授课年级：{{item.teaclass}}</text>
+     </view>
+
+
+  </view>
+
+</view>
+

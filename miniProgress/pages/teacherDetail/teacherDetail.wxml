@@ -1,0 +1,23 @@
+<view class="detail_wrap">
+  <view class="top">
+    <view class="img">
+      <image src="../../images/home-teacher.png"></image>
+    </view>
+    <view class="info">
+      <text class="name">{{teacherDeatil.name}}</text>
+      <text class="graduation">毕业学校：{{teacherDeatil.graduation}}</text>
+      <text class="education">学 历：{{teacherDeatil.education}}</text>
+      <text class="teaclass">授课年级：{{teacherDeatil.teaclass}}</text>
+    </view>
+  </view>
+
+  <view class="content">
+      <view class="title">教学成果</view>
+      <text class="text">{{teacherDeatil.achievement}}</text>
+      <view class="title">教学经验</view>
+      <text class="text">{{teacherDeatil.experience}}</text>
+      <view class="title">教学特点</view>
+      <text class="text">{{teacherDeatil.character}}</text>
+  </view>
+
+</view>

@@ -1,0 +1,19 @@
+<view class="public_detail">
+      <image src="{{publicImgUrl}}" class="img"></image>
+      <view class="top">
+        <view>
+          <text class="name">{{publicDetail.name}}</text>
+          <text class="free">免费</text>
+        </view>
+          <view>
+              <text class="time">上课时间:{{publicDetail.time}}</text>
+              <text class="count">已报{{publicDetail.count}}人</text>
+          </view>
+      </view>
+      <view class="content">
+            <text class="title">课程介绍</text>
+            <view class="text">{{publicDetail.classintro}}</view>
+            <text class="title">老师简介</text>
+            <view class="text">{{publicDetail.teacherintro}}</view>
+      </view>
+</view>
