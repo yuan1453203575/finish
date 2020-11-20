@@ -5,7 +5,6 @@ export const SET_USERINFO = '/api/user/set_userInfo';
 
 export const GET_COURSELIST =  '/api/course/get_courseList';
 export const GET_TEACHERLIST =  '/api/teacher/get_teacherList';
-
 //资讯接口
 export const GET_NEWSLIST = '/api/news/get_newsList';
 //资讯详情接口

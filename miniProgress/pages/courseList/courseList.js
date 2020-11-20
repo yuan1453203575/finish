@@ -1,14 +1,12 @@
-// pages/news/news.js
-import {GET_NEWSLIST, HTTP} from '../../http/api'
+import {HTTP, GET_COURSELIST} from '../../http/api'
+// pages/courseList/courseList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgPath: '../../images/news.png',
-    list: [],
-    viewIcon: '../../images/new_view.png'
+    courseList: [],
   },
 
   /**
@@ -16,16 +14,11 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: HTTP + GET_NEWSLIST,
+      url: HTTP + GET_COURSELIST,
       method: 'GET',
-      success: (data) =>{
-        this.setData({list: data.data.data});
+      success: (data) => {
+        this.setData({courseList: data.data.data});
       }
-    })
-  },
-  gonewsDetail(ev){
-    wx.navigateTo({
-      url: '../newsDetail/newsDetail?id='+ev.currentTarget.dataset.id
     })
   },
 

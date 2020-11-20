@@ -1,0 +1,9 @@
+<!--pages/courseList/courseList.wxml-->
+<view class="page course">
+  <view class="top">
+    <view class="select">
+      <text class="iconfont iconsearch"></text>
+      <text class="text">搜索课程</text>
+    </view>
+  </view>
+</view>

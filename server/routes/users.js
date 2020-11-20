@@ -8,7 +8,6 @@ const router = new Router({prefix: '/api/user'});
 
 //保存用户信息
 router.post('/set_userInfo', async (ctx) => {
-  console.log(ctx.request.body);
   const userInfo = ctx.request.body;
   new User(userInfo).save();
   ctx.body = 'ok';

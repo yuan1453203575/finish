@@ -38,6 +38,15 @@ router.get('/get_teacherList', async (ctx) => {
   }
 })
 
+router.get('/get_detailTeacher', async (ctx) => {
+  const { id } = ctx.request.query;
+  const result = await Teacher.findOne({id});
+  ctx.body = {
+    message: 'ok',
+    data: result,
+  }
+})
+
 
 
 

@@ -1,5 +1,5 @@
 <!--pages/home/home.wxml-->
-<view class="home">
+<view class="home page">
   <view class="header">
     <view class="addr">选择地区</view>
     <input type="text" />
@@ -43,5 +43,35 @@
       </view>
     </scroll-view>
   </view>
+  <view class="course">
+    <view class="top" bindtap="goCourseListAction">
+      <text class="title">推荐课程</text>
+      <view class="more">
+        <text class="mo">更多</text>
+        <text class="iconfont iconiconfontjiantou5"></text>
+      </view>
+    </view>
+    <view class="content">
+      <view class="item" wx:for="{{courseHomeList}}" wx:key="index">
+        <text class="name">{{item.name}}秋季班</text>
+        <view class="addr">
+          <text class="iconfont iconlocation"></text>
+          <text>{{item.addr}}</text>
+        </view>
+        <view class="day">
+          <text class="iconfont iconrili"></text>
+          <text>{{item.classtime}}</text>
+        </view>
+        <view class="time">
+          <text class="iconfont test"></text>
+          <text>周一周四17:30-18.30</text>
+        </view>
+        <view class="price">
+          <text>￥{{item.price}}/{{item.coursenum}}课时</text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
+
 
