@@ -1,9 +1,17 @@
 /* pages/home/home.wxss */
+.home {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+}
 .header {
   width: 100%;
   height: 80rpx;
   display: flex;
   align-items: center;
+  background-color: #fff;
 }
 .addr {
   width: 190rpx;
@@ -19,4 +27,197 @@ input {
 .image {
   width: 100%;
   height: 372rpx;
+}
+.category {
+  width: 100%;
+  height: 274rpx;
+  background-color: #fff;
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #333;
+  font-size: 32rpx;
+}
+.category view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.category .iconfont {
+  font-size: 60rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.category .icondiannao {
+  font-size: 70rpx;
+  margin-top: -10rpx;
+}
+.recommend {
+  width: 100%;
+  height: 440rpx;
+  background-color: #fff;
+}
+.recommend .top {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommend .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+}
+.recommend .more {
+  margin-right: 30rpx;
+}
+.recommend .mo {
+  color: #ccc;
+}
+.recommend .scroll {
+  width: 100%;
+}
+.recommend .scroll-view {
+  display: flex;
+  height: 340rpx;
+  align-items: center;
+}
+.recommend .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 120rpx;
+}
+.item image {
+  width: 176rpx;
+  height: 176rpx;
+}
+.item .name {
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #000;
+  font-weight: bold;
+}
+.item .station {
+  font-size: 24rpx;
+  color: #333;
+}
+.course {
+  width: 100%;
+  height: 726rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.course .top {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+}
+.course .more {
+  margin-right: 30rpx;
+}
+.course .mo {
+  color: #ccc;
+}
+.course .content {
+  width: 100%;
+  height: 612rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.course .item {
+  width: 50%;
+  height: 306rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  color: #999;
+}
+.course .item:nth-child(odd) {
+  border-right: 1px solid #ccc;
+}
+.course .item .name {
+  font-size: 28prx;
+  line-height: 70rpx;
+  color: #333;
+  font-weight: normal;
+}
+.course .addr {
+  width: 100%;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+.course .price {
+  font-size: 28rpx;
+  line-height: 70rpx;
+  color: red;
+}
+.public{
+  width: 100%;
+  height: 480rpx;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+.public .top {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.public .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+}
+.public .more {
+  margin-right: 30rpx;
+}
+.public .mo {
+  color: #ccc;
+}
+.public .content{
+  box-sizing: border-box;
+  width: 100%;
+  height: 380rpx;
+  padding:0 40rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.public .content .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.public .content .item image{
+  width: 280rpx;
+  height: 180rpx;
+}
+.public .content .item .count{
+  margin:10rpx 0;
+  font-size: 28rpx;
+  color: #999;
+}
+.public .content .item .count .free{
+  color: #ff0000;
+  margin-left: 20rpx  ;
 }

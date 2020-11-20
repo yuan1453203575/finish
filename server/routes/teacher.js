@@ -30,6 +30,26 @@ const router = new Router({prefix: '/api/teacher'});
 //   console.log(error);
 //   console.log('保存失败');
 // })
+router.get('/get_teacherList', async (ctx) => {
+  const result = await Teacher.find();
+  ctx.body = {
+    message: 'ok',
+    data: result,
+  }
+})
+
+
+router.get('/get_detailTeacher', async (ctx) => {
+  const { id } = ctx.request.query;
+  const result = await Teacher.findOne({id});
+  ctx.body = {
+    message: 'ok',
+    data: result,
+  }
+})
+
+// get_detailTeacher
+
 
 
 module.exports = router;

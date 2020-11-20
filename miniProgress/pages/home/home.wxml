@@ -1,10 +1,111 @@
 <!--pages/home/home.wxml-->
-<view class="header">
-  <view class="addr">选择地区</view>
-  <input type="text" />
+<view class="home page">
+  <view class="header">
+    <view class="addr">选择地区</view>
+    <input type="text" />
+  </view>
+  <swiper autoplay="true" interval="3000" indicator-dots="true" indicator-color="#ddd" indicator-active-color="#fff"
+    circular="true">
+    <swiper-item wx:for="{{bannerList}}" wx:key="index">
+      <image class="image" src="{{item.imageUrl}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="category">
+    <view>
+      <text class="iconfont iconclassify_icon"></text>
+      <text>选课中心</text>
+    </view>
+    <view>
+      <text class="iconfont .icondiannao"></text>
+      <text>公开课</text>
+    </view>
+    <view>
+      <text class="iconfont iconlihe"></text>
+      <text>热门活动</text>
+    </view>
+    <view>
+      <text class="iconfont iconlocation"></text>
+      <text>全部校区</text>
+    </view>
+  </view>
+  <!-- 名师推荐 -->
+  <view class="recommend">
+    <view class="top">
+      <text class="title">名师推荐</text>
+      <view class="more" bindtap="goteacherList">
+        <text class="mo">更多</text>
+        <text class="iconfont iconiconfontjiantou5"></text>
+      </view>
+    </view>
+    <scroll-view scroll-x="{{true}}" class="scroll">
+      <view class="scroll-view">
+        <view class="item" wx:for="{{teacherList}}" wx:key="index" bindtap="goteacherDetail" data-id="{{item.id}}">
+          <image src="{{imgUrl}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="station">{{item.station}}老师</text>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+  <!-- 课程 -->
+  <view class="course">
+    <view class="top" bindtap="goCourseListAction">
+      <text class="title">推荐课程</text>
+      <view class="more">
+        <text class="mo">更多</text>
+        <text class="iconfont iconiconfontjiantou5"></text>
+      </view>
+    </view>
+    <view class="content">
+      <view class="item" wx:for="{{courseHomeList}}" wx:key="index">
+        <text class="name">{{item.name}}秋季班</text>
+        <view class="addr">
+          <text class="iconfont iconlocation"></text>
+          <text>{{item.addr}}</text>
+        </view>
+        <view class="day">
+          <text class="iconfont iconrili"></text>
+          <text>{{item.classtime}}</text>
+        </view>
+        <view class="time">
+          <text class="iconfont test"></text>
+          <text>周一周四17:30-18.30</text>
+        </view>
+        <view class="price">
+          <text>￥{{item.price}}/{{item.coursenum}}课时</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 公开课 -->
+  <view class="public">
+    <view class="top">
+      <text class="title">公开课</text>
+      <view class="more" bindtap="gopublicList">
+        <text class="mo">更多</text>
+        <text class="iconfont iconiconfontjiantou5"></text>
+      </view>
+    </view>
+    <view class="content">
+        <view class="item" wx:for="{{publicList}}" wx:key="index" bindtap="gopublicDetail" data-id="{{item.id}}">
+          <image src="{{publicImgUrl}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="count">已报{{item.count}}人  <text class="free">免费</text></text>
+         
+        </view>
+
+    </view>
+
+  </view>
 </view>
-<swiper autoplay="true" interval="3000" indicator-dots="true" indicator-color="#ddd" indicator-active-color="#fff" circular="true">
- <swiper-item wx:for="{{bannerList}}" wx:key="index">
-   <image class="image" src="{{item.imageUrl}}"></image>
- </swiper-item>
-</swiper>
+    
+
+
+
+
+
+
+
+
+<!-- 内容 -->

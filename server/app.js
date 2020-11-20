@@ -5,7 +5,10 @@ const bodyParser = require('koa-bodyparser');
 const auth = require('./routes/auth');
 const users = require('./routes/users');
 const teacher = require('./routes/teacher');
-const course = require('./routes/course')
+const course = require('./routes/course');
+const news = require('./routes/news');
+const activity = require('./routes/activity');
+const public = require('./routes/public');
 
 const app = new koa(); 
 
@@ -30,4 +33,10 @@ app.use(users.routes()).use(users.allowedMethods());
 app.use(teacher.routes()).use(teacher.allowedMethods());
 //处理课程信息
 app.use(course.routes()).use(teacher.allowedMethods());
+//处理资讯信息
+app.use(news.routes()).use(news.allowedMethods());
+//处理活动信息
+app.use(activity.routes()).use(activity.allowedMethods());
+//处理公开课信息
+app.use(public.routes()).use(public.allowedMethods());
 module.exports = app;
