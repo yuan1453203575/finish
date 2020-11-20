@@ -1,14 +1,13 @@
-// pages/news/news.js
-import {GET_NEWSLIST, HTTP} from '../../http/api'
+// pages/publicList/publicList.js
+import {HTTP,GET_PUBLICLIST} from '../../http/api'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgPath: '../../images/news.png',
-    list: [],
-    viewIcon: '../../images/new_view.png'
+    publicList:[],
+    publicImgUrl:'../../images/public.png',
   },
 
   /**
@@ -16,18 +15,20 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: HTTP + GET_NEWSLIST,
+      url: HTTP + GET_PUBLICLIST,
       method: 'GET',
-      success: (data) =>{
-        this.setData({list: data.data.data});
-      
+      success: (data) => {
+        this.setData({publicList: data.data.data});
+        console.log(this.data.publicList);
         
       }
     })
   },
-  gonewsDetail(ev){
+
+
+  gopublicDetail(ev){
     wx.navigateTo({
-      url: '../newsDetail/newsDetail?id='+ev.currentTarget.dataset.id
+      url: '../publicDetail/publicDetail?id='+ev.currentTarget.dataset.id
     })
   },
 

@@ -1,14 +1,12 @@
-// pages/news/news.js
-import {GET_NEWSLIST, HTTP} from '../../http/api'
+// pages/teacherDetail/teacherDetail.js
+import {GET_DETAILTEACHER, HTTP} from '../../http/api'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgPath: '../../images/news.png',
-    list: [],
-    viewIcon: '../../images/new_view.png'
+      teacherDeatil:{}
   },
 
   /**
@@ -16,18 +14,16 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: HTTP + GET_NEWSLIST,
-      method: 'GET',
-      success: (data) =>{
-        this.setData({list: data.data.data});
-      
+      url: HTTP + GET_DETAILTEACHER,
+      method:'GET',
+      data:{
+        id: parseInt(options.id)
+      },
+      success:(data) =>{
         
+       this.setData({teacherDeatil:data.data.data})
+      //  console.log(this.data.teacherDeatil);
       }
-    })
-  },
-  gonewsDetail(ev){
-    wx.navigateTo({
-      url: '../newsDetail/newsDetail?id='+ev.currentTarget.dataset.id
     })
   },
 

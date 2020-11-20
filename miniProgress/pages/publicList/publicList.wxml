@@ -1,0 +1,10 @@
+<view class="public_list">
+    <view class="item" data-id="{{item.id}}" wx:for="{{publicList}}" wx:key="index" bindtap="gopublicDetail">
+          <image src="{{publicImgUrl}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="count">已报{{item.count}}人  <text class="free">免费</text></text>
+
+
+    </view>
+
+</view>
